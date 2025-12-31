@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz Año Nuevo Jesu</title>
+    <title>Para mi Jesu ❤️</title>
     <link rel="stylesheet" href="main.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1 id="greeting">¡Feliz Año Nuevo, Jesu!</h1>
-        <p class="love-message">De: Ane, con todo mi amor ❤️</p>
-        
-        <div id="countdown">
-            <span id="timer">Preparando la sorpresa...</span>
-        </div>
 
-        <div id="extra-message" class="hidden">
-            <p>Gracias por un año increíble a tu lado. ¡Vamos por un 2026 lleno de más momentos juntos!</p>
-        </div>
-        
-        <button id="btn-magic">Haz clic para la sorpresa</button>
+    <div class="decorations">
+        <div class="circle one"></div>
+        <div class="circle two"></div>
     </div>
 
-    <canvas id="canvas"></canvas>
+    <div class="container">
+        <header>
+            <h1 id="greeting">¡Feliz Año Nuevo, Jesu!</h1>
+            <p class="subtitle">De: Ane, tu persona favorita</p>
+        </header>
+
+        <div class="countdown-box">
+            <p>Faltan para nuestro 2026:</p>
+            <div id="timer">00d 00h 00m 00s</div>
+        </div>
+
+        <div id="reason-container" class="reason-box hidden">
+            <p id="reason-text">Haz clic en el botón para ver algo especial...</p>
+        </div>
+
+        <button id="btn-magic">Presiona aquí, Jesu ❤️</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
