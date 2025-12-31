@@ -1,67 +1,99 @@
+:root {
+    --primary: #ff4d6d;
+    --gold: #f9d71c;
+    --dark: #0f0c29;
+}
+
 body {
     margin: 0;
-    padding: 0;
-    background: radial-gradient(circle, #1a1a2e 0%, #16213e 100%);
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    font-family: 'Poppins', sans-serif;
     overflow: hidden;
-    text-align: center;
 }
 
 .container {
-    z-index: 10;
     background: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
+    padding: 3rem;
+    border-radius: 30px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    z-index: 5;
+    max-width: 90%;
 }
 
 h1 {
-    font-size: 3rem;
-    color: #f9d71c; /* Color dorado */
-    text-shadow: 0 0 10px #f9d71c;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    background: linear-gradient(to right, #fff, var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 2s infinite alternate;
 }
 
-.love-message {
-    font-style: italic;
-    font-size: 1.2rem;
+.countdown-box {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
 
 #timer {
-    font-size: 1.5rem;
-    display: block;
-    margin: 20px 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--gold);
+    letter-spacing: 2px;
+}
+
+.reason-box {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #ffb3c1;
 }
 
 button {
-    background: #e94560;
-    color: white;
+    margin-top: 25px;
+    padding: 15px 30px;
     border: none;
-    padding: 12px 25px;
     border-radius: 50px;
-    cursor: pointer;
+    background: var(--primary);
+    color: white;
     font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
     transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
 }
 
 button:hover {
-    transform: scale(1.1);
-    background: #ff2e63;
+    transform: translateY(-3px) scale(1.05);
+    background: #ff758f;
 }
 
-.hidden {
-    display: none;
-}
+.hidden { display: none; }
 
-canvas {
+/* Decoraciones de fondo */
+.circle {
     position: absolute;
-    top: 0;
-    left: 0;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+}
+.one { width: 300px; height: 300px; background: #ff4d6d; top: -50px; left: -50px; }
+.two { width: 250px; height: 250px; background: #f9d71c; bottom: -50px; right: -50px; }
+
+@keyframes glow {
+    from { filter: drop-shadow(0 0 5px var(--gold)); }
+    to { filter: drop-shadow(0 0 15px #fff); }
 }
