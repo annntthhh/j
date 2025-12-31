@@ -89,6 +89,7 @@ h1 {
     color: #ffb3c1;
 }
 
+/* Idea 10: Botón con Brillo de Cristal */
 button {
     margin-top: 25px;
     padding: 15px 30px;
@@ -99,7 +100,27 @@ button {
     font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
     transition: 0.3s;
+}
+
+button:after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(30deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -60%; }
+    20% { left: 120%; }
+    100% { left: 120%; }
 }
 
 button:hover {
