@@ -83,7 +83,6 @@ button:hover {
 
 .hidden { display: none; }
 
-/* Decoraciones de fondo */
 .circle {
     position: absolute;
     border-radius: 50%;
