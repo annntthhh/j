@@ -1,3 +1,4 @@
+// 1. Cuenta regresiva y actualización de título
 const countdown = () => {
     const nextYear = 2026;
     const countDate = new Date(`Jan 1, ${nextYear} 00:00:00`).getTime();
@@ -16,6 +17,7 @@ const countdown = () => {
 };
 setInterval(countdown, 1000);
 
+// 2. Razones para Jesu
 const razones = [
     "Por ser mi mejor amigo y mi novio a la vez.",
     "Por la forma en que me haces reír cuando estoy triste.",
@@ -43,6 +45,7 @@ btn.addEventListener('click', () => {
     btn.innerText = "¡Ver otra razón!";
 });
 
+// 3. Efectos finales
 function lanzarFuegos() {
     var duration = 30 * 1000;
     var animationEnd = Date.now() + duration;
@@ -53,7 +56,18 @@ function lanzarFuegos() {
     }, 250);
 }
 
-// ESTA ES LA IDEA QUE ME PEDISTE:
+// Lógica de Idea 1: Llenado de barra de progreso
+function llenarBarra() {
+    const bar = document.getElementById('love-bar');
+    let width = 0;
+    setInterval(() => {
+        width = (width >= 100) ? 0 : width + 0.1;
+        bar.style.width = width + '%';
+    }, 50);
+}
+llenarBarra();
+
+// Lógica para cambiar mensaje según el año
 function actualizarMensaje() {
     const ahora = new Date();
     const mensajeHeader = document.getElementById('greeting');
